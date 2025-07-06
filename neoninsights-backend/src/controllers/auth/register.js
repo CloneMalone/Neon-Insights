@@ -1,7 +1,7 @@
 import query from '../../../database/db.js';
 import bcrypt from 'bcryptjs';
 import crypto from 'crypto';
-import jwt from 'jsonwebtoken';
+import { sendConfirmationEmail } from './email.js';
 
 async function registerUser(req, res) {
     const { firstname, lastname, email, password } = req.body;
@@ -25,7 +25,7 @@ async function registerUser(req, res) {
          [firstname, lastname, email, hashedPassword, token]
     );
 
-    // Final response
+    // Test Response
     res.status(200).json({
         message: "User added successfully!",
         firstName: firstname,
@@ -34,6 +34,9 @@ async function registerUser(req, res) {
         password: hashedPassword,
         confirmationToken: token
     });
+
+    // Send confirmation email
+    sendConfirmationEmail(email, token);
 }
 
 export default registerUser;
