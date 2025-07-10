@@ -2,11 +2,11 @@ import registerUser from '../../services/authServices/registerUser.js';
 
 async function registerRequest(req, res) {
     // Grab request body
-    const { firstname, lastname, email, password } = req.body;
+    const { firstname, lastname, email, password, confirmPassword } = req.body;
 
     // Add user to the database
     try {
-        await registerUser({ firstname, lastname, email, password });
+        await registerUser({ firstname, lastname, email, password, confirmPassword });
 
         res.status(200).json({
         message: "User added successfully!",

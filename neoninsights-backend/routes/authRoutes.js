@@ -1,5 +1,6 @@
 import express from 'express';
-import validateRegisterMiddleware from '../middleware/validation/validateRegister.js';
+import validateRegisterUserMiddleware from '../middleware/validation/validateRegisterUser.js';
+import validateDeleteUserMiddleware from '../middleware/validation/validateDeleteUser.js';
 import registerRequest from '../controllers/auth/registerRequest.js';
 import deleteRequest from '../controllers/auth/deleteRequest.js';
 
@@ -7,7 +8,7 @@ import deleteRequest from '../controllers/auth/deleteRequest.js';
 const router = express.Router();
 
 // Set up routes
-router.post('/register', validateRegisterMiddleware, registerRequest);
-router.post('/delete', deleteRequest);
+router.post('/register', validateRegisterUserMiddleware, registerRequest);
+router.post('/delete', validateDeleteUserMiddleware, deleteRequest);
 
 export default router;

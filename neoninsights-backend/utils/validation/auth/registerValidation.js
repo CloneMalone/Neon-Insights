@@ -1,10 +1,27 @@
 
 
 // Register validation
-function validateRegister({ firstname, lastname, email, password }) {
+function validateRegister({ firstname, lastname, email, password, confirmPassword }) {
     // Check if any fields are empty
-    if (!firstname.trim() || !lastname.trim() || !email.trim() || !password.trim()) {
-        return {error: { details: [{ message: "All fields are required." }] }};
+    if (
+        !firstname.trim() ||
+        !lastname.trim() ||
+        !email.trim() ||
+        !password.trim() ||
+        !confirmPassword.trim()
+    ) {
+        return {
+            error: {
+                details: [
+                    { message: "All fields are required." }
+                ]
+            }
+        };
+    }
+
+    // Check confirmPassword
+    if (password !== confirmPassword) {
+        return {error: { details: [{ message: "Passwords must match." }] }};
     }
 
     // Email format check

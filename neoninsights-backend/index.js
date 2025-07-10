@@ -1,6 +1,5 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import query from './database/db.js';
 import authRoutes from './routes/authRoutes.js';
 
 // Config .env use

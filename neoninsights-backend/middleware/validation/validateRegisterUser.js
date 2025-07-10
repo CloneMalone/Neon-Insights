@@ -1,7 +1,7 @@
 import { validateRegister } from "../../utils/validation/auth/registerValidation.js";
 
 // Validate request body objects registration data
-function validateRegisterMiddleware(req, res, next) {
+function validateRegisterUserMiddleware(req, res, next) {
     const { error } = validateRegister(req.body);
     if (error) {
         return res.status(400).json({ message: error.details[0].message });
@@ -11,4 +11,4 @@ function validateRegisterMiddleware(req, res, next) {
     next();
 }
 
-export default validateRegisterMiddleware;
+export default validateRegisterUserMiddleware;

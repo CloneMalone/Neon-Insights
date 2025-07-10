@@ -18,6 +18,13 @@ async function addUser({ firstname, lastname, email, hashedPassword, token }) {
 
 // Delete user from the database
 async function deleteUser({ email }) {
+    const emailExists = await userEmailExists({ email });
+
+    if (emailExists.rowCount > 0) {
+        
+    }
+    
+
     await query(`DELETE FROM users
                  WHERE email = $1`, [email]);
 }
