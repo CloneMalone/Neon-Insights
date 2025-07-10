@@ -13,7 +13,7 @@ async function sendConfirmationEmail(email, token) {
 
     // Send the email
     await transporter.sendMail({
-        from: `"Neon Insights" <neoninsights@support.com`,
+        from: `"Neon Insights" <neoninsights@support.com>`,
         to: email,
         subject: `Please confirm your email`,
         html: `<h2>Thank you for registering!</h2>

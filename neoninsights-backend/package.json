@@ -1,7 +1,7 @@
 {
   "name": "neon-insights",
   "version": "1.0.0",
-  "main": "neoninsights-backend/src/index.js",
+  "main": "index.js",
   "dependencies": {
     "accepts": "^2.0.0",
     "ansi-regex": "^5.0.1",

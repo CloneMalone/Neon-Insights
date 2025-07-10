@@ -1,13 +1,12 @@
-import query from "../../../database/db.js";
+import { deleteUser } from "../../models/user/userModel.js";
 
 // Delete user
-async function deleteUser(req, res) {
+async function deleteRequest(req, res) {
     const { email } = req.body;
 
     try {
         // Delete user
-        await query(`DELETE FROM users
-                 WHERE email = $1`, [email]);
+        await deleteUser({ email });
 
         // Respond with success message
         res.status(200).json({
@@ -25,4 +24,4 @@ async function deleteUser(req, res) {
 
 }
 
-export default deleteUser;
+export default deleteRequest;
