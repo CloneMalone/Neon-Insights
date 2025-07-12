@@ -1,0 +1,25 @@
+/* Import Fonts */
+
+    /* Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+/* CyberDash Theme */
+[data-theme="CyberDash"] {
+    --font-family: 'Inter', sans-serif;
+
+    --background: #101014;
+
+    --main-text: #F1F1F2;
+
+    --insight-card-border: #2A292E;
+    --insight-card-bright-gradient: #287B5A;
+    --insight-card-mid-gradient: #203F32;
+    --insight-card-dark-gradient: #141D1E;
+
+    --insight-calculation-top-gradient: #67C7A7;
+    --insight-calculation-bottom-gradient: #254A3B;
+
+    --button: #5fb89a;
+}
+

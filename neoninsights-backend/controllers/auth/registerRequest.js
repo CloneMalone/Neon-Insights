@@ -9,15 +9,12 @@ async function registerRequest(req, res) {
         await registerUser({ firstname, lastname, email, password, confirmPassword });
 
         res.status(200).json({
-        message: "User added successfully!",
-        firstName: firstname,
-        lastname: lastname,
-        email: email
-    });
+            message: "Registration successful! You may not log in!"
+        });
     } catch (error) {
         res.status(500).json({
-            message: `Error adding registered user to database: ${error}`
-        })
+            message: `Server Error: Error adding registered user to database. Please try again or contact support.`
+        });
         
     }
 }

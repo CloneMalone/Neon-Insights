@@ -1,0 +1,42 @@
+
+/* Mobile Menu Animations */
+@keyframes mobile-menu-slide-down {
+    0% {
+        opacity: 0;
+        max-height: 0;
+    }
+    100% {
+        opacity: 1;
+        max-height: 500px;
+    }
+}
+
+@keyframes mobile-menu-slide-up {
+    0% {
+        opacity: 1;
+        max-height: 500px;
+    }
+    100% {
+        opacity: 0;
+        max-height: 0;
+    }
+}
+
+
+/* Misc Animations */
+@keyframes fade-in-slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+}
+
+
+.fade-in-slide-up {
+    animation: fade-in-slide-up 1s ease-in-out;
+}

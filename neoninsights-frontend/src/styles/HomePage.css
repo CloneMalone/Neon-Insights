@@ -1,0 +1,25 @@
+.home-hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    margin-top: 7rem;
+}
+
+.home-hero-section h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 8px var(--insight-calculation-top-gradient), 0 0 15px var(--insight-calculation-bottom-gradient);
+
+}
+
+.home-hero-section h2 {
+    font-size: 1.8rem;
+    text-shadow: 0 0 5px var(--insight-calculation-top-gradient), 0 0 10px var(--insight-calculation-bottom-gradient);
+
+}
+
+.home-hero-section p {
+    margin-top: .5rem;
+}

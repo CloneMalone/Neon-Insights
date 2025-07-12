@@ -1,0 +1,83 @@
+nav {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav header {
+    font-size: 1.7rem;
+    color: var(--main-text);
+    text-shadow: 0 0 3px var(--insight-calculation-top-gradient), 0 0 10px var(--insight-calculation-bottom-gradient);
+
+}
+
+.header-hamburger-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 6px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.hamburger-container span {
+    height: 3px;
+    width: 30px;
+    background-color: var(--main-text);
+    transition-duration: 0.5s;
+}
+
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    overflow: hidden;
+    transition-duration: 1s;
+}
+
+.mobile-menu a {
+    font-size: 1.5rem;
+    padding: 20px;
+    border-bottom: 1px solid var(--insight-calculation-top-gradient);
+    width: 100%;
+    text-align: center;
+}
+
+
+
+/* Hamburger Animation On Click */
+.hamburger-container.open span:nth-child(1) {
+    transform: rotate(45deg) translateY(13px);
+}
+
+.hamburger-container.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-container.open span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-13px);
+}
+
+
+/* Mobile Menu Animation */
+.mobile-menu.open {
+    animation: mobile-menu-slide-down 1s ease-out;
+}
+
+.mobile-menu.closed {
+    animation: mobile-menu-slide-up .5s ease-out;
+    opacity: 0;
+    max-height: 0;
+}
+
+
+

@@ -1,5 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import cors from 'cors';
 import authRoutes from './routes/authRoutes.js';
 
 // Config .env use
@@ -9,8 +10,10 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware to parse JSON
+// Middleware
 app.use(express.json());
+app.use(cors());
+
 
 // Mount routes
 app.use('/api/auth', authRoutes);

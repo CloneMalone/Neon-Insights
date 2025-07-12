@@ -1,7 +1,8 @@
+import { userEmailExists } from "../../../models/user/userModel.js";
 
 
 // Register validation
-function validateRegister({ firstname, lastname, email, password, confirmPassword }) {
+async function validateRegister({ firstname, lastname, email, password, confirmPassword }) {
     // Check if any fields are empty
     if (
         !firstname.trim() ||
@@ -19,6 +20,12 @@ function validateRegister({ firstname, lastname, email, password, confirmPasswor
         };
     }
 
+    // // If email already exists, return error code
+    const emailExists = await userEmailExists({ email });
+    if (emailExists.rows.length > 0) {
+        return {error: { details: [{ message: "An account with this email is already registered." }] }};
+    }
+
     // Check confirmPassword
     if (password !== confirmPassword) {
         return {error: { details: [{ message: "Passwords must match." }] }};
@@ -31,8 +38,8 @@ function validateRegister({ firstname, lastname, email, password, confirmPasswor
     }
 
     // Password length check
-    if (password.length < 6) {
-        return {error: { details: [{ message: "Password must be at least 6 characters." }] }};
+    if (password.length < 8) {
+        return {error: { details: [{ message: "Password must be at least 8 characters." }] }};
     }
 
     // No errors
