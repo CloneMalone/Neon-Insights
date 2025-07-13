@@ -16,10 +16,13 @@ import './styles/Animations.css'
 import './styles/Themes.css';
 import './styles/AuthForm.css';
 import './styles/HomePage.css';
+import './styles/ToastifyOverrides.css';
+import './styles/RegisterComplete.css';
 import './styles/Main.css';
 
 // Theme hook
 import useSetTheme from './hooks/useSetTheme';
+
 
 // Component imports
 import Nav from './components/main-components/Nav.js';
@@ -37,8 +40,8 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/register-complete" element={<RegisterCompletePage />} />
       </Routes>
-      <ToastContainer />
 
+      <ToastContainer />
     </Router>
   );
 }

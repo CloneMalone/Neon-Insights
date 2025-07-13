@@ -1,0 +1,18 @@
+.register-complete-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 4rem;
+}
+
+.register-complete-main h1 {
+    font-size: 2rem;
+    text-shadow: 0 0 8px var(--insight-calculation-top-gradient), 0 0 15px var(--insight-calculation-bottom-gradient);
+
+}
+
+.register-complete-main p {
+    font-size: 1.5rem;
+    text-shadow: 0 0 8px var(--insight-calculation-top-gradient), 0 0 15px var(--insight-calculation-bottom-gradient);
+
+}

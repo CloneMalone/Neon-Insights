@@ -28,7 +28,7 @@ async function validateRegister({ firstname, lastname, email, password, confirmP
 
     // Check confirmPassword
     if (password !== confirmPassword) {
-        return {error: { details: [{ message: "Passwords must match." }] }};
+        return {error: { details: [{ message: "Passwords do not match." }] }};
     }
 
     // Email format check

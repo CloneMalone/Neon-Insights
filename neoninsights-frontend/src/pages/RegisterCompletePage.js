@@ -1,9 +1,10 @@
+import RegisterComplete from "../components/auth-components/RegisterComplete";
 
 
 function RegisterCompletePage() {
     return (
-        <main>
-            
+        <main className="register-complete-main fade-in-slide-up">
+            <RegisterComplete />
         </main>
     );
 }
