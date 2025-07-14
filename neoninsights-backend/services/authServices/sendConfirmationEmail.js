@@ -18,7 +18,7 @@ async function sendConfirmationEmail(email, token) {
         subject: `Please confirm your email`,
         html: `<h2>Thank you for registering!</h2>
                <p>Click the link below to confirm your email:</p>
-               <a href="http://localhost:3000/api/auth/confirm-email?token=${token}">Confirm Email</a>`
+               <a href="${process.env.API_URL}/confirm-email/${token}">Confirm Email</a>`
     });
 
 }

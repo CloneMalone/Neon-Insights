@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage.js';
 import RegisterPage from './pages/RegisterPage.js';
 import RegisterCompletePage from './pages/RegisterCompletePage.js';
+import EmailConfirmedPage from './pages/EmailConfirmedPage.js';
 
 // CSS Imports
 import './styles/Reset.css';
@@ -18,7 +19,9 @@ import './styles/AuthForm.css';
 import './styles/HomePage.css';
 import './styles/ToastifyOverrides.css';
 import './styles/RegisterComplete.css';
+import './styles/EmailConfirmed.css';
 import './styles/Main.css';
+
 
 // Theme hook
 import useSetTheme from './hooks/useSetTheme';
@@ -39,6 +42,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/register-complete" element={<RegisterCompletePage />} />
+        <Route path="/confirm-email/:token" element={<EmailConfirmedPage />} />
       </Routes>
 
       <ToastContainer />

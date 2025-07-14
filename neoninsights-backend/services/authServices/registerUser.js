@@ -1,7 +1,7 @@
 import bcrypt from "bcryptjs";
 import crypto from "crypto";
 import { addUser } from "../../models/user/userModel.js";
-import { sendConfirmationEmail } from "./emailConfirmation.js";
+import { sendConfirmationEmail } from "./sendConfirmationEmail.js";
 
 // Register user
 async function registerUser({ firstname, lastname, email, password }) {

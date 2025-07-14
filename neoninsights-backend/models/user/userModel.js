@@ -29,4 +29,23 @@ async function deleteUser({ email }) {
                  WHERE email = $1`, [email]);
 }
 
-export { addUser, userEmailExists, deleteUser };
+// Get user by token
+async function getUserByToken(token) {
+    const userByToken = await query(`SELECT * FROM users WHERE confirmationtoken = $1`, [token]);
+
+    return userByToken;
+}
+
+// Confirm users email. Set confirmed to true
+async function confirmUserEmail(token) {
+    await query(`UPDATE users SET isconfirmed = true WHERE confirmationtoken = $1`, [token]);
+
+}
+
+
+// Confirm the token by invalidating it
+async function invalidateToken(token) {
+    await query(`UPDATE users SET confirmationtoken = NULL WHERE confirmationtoken = $1`, [token]);
+} 
+
+export { addUser, userEmailExists, deleteUser, getUserByToken, confirmUserEmail, invalidateToken };
