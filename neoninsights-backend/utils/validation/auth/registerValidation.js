@@ -22,7 +22,7 @@ async function validateRegister({ firstname, lastname, email, password, confirmP
 
     // // If email already exists, return error code
     const emailExists = await userEmailExists({ email });
-    if (emailExists.rows.length > 0) {
+    if (emailExists) {
         return {error: { details: [{ message: "An account with this email is already registered." }] }};
     }
 

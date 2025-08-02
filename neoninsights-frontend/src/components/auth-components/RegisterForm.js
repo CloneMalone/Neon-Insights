@@ -21,7 +21,6 @@ function RegisterForm() {
         const { ok, data } = await submitRegisterUser(formData);
 
         if (ok) {
-            toast.success(data.message);
             navigate("/register-complete");
         } 
         else {

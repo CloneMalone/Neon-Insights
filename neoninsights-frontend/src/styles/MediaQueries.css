@@ -1,0 +1,47 @@
+@media (min-width: 1024px) {
+    .mobile-menu {
+        display: none;
+    }
+
+    .hamburger-container {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .desktop-menu {
+        display: flex;
+        width: 270px;
+        justify-content: space-between;
+    }
+
+    .desktop-menu-link {
+        font-size: 1.3rem;
+    }
+
+    .home-hero-section h1 {
+        font-size: 5rem;
+    }
+
+    .home-infocard-section {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .home-infocards-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+
+    
+
+
+}

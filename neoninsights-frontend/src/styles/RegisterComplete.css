@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-    margin-top: 4rem;
+    padding-top: 9rem;
 }
 
 .register-complete-main h1 {

@@ -1,7 +1,19 @@
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
 body {
-    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
     height: 100vh;
-    background: linear-gradient(var(--background) 80%, var(--insight-calculation-bottom-gradient));
+    margin: 0;
+    font-family: var(--font-family);
+    background: linear-gradient(to bottom, var(--background-top-gradient), var(--background-bottom-gradient));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: var(--main-text);
 }
 
 main {
@@ -9,7 +21,12 @@ main {
     margin: 0 auto;
 }
 
-h1, h2, h3, p, a, label {
+h1,
+h2,
+h3,
+p,
+a,
+label {
     color: var(--main-text);
     text-decoration: none;
 }

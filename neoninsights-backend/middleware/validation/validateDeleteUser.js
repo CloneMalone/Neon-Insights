@@ -6,7 +6,7 @@ async function validateDeleteUserMiddleware(req, res, next) {
 
     // Check if email exists
     const emailExists = await userEmailExists({ email });
-    if (emailExists.rows.length === 0) {
+    if (!emailExists) {
         return res.status(400).json({ message: "Unable to delete account. Email does not exist." });
     }
 

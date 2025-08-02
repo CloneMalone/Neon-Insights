@@ -1,8 +1,15 @@
+.desktop-menu {
+    display: none;
+}
+
 nav {
+    background-color: var(--background-top-gradient);
+    position: fixed;
+    z-index: 999;
     display: flex;
     flex-direction: column;
-    padding: 15px 0;
-    width: 90%;
+    padding: 15px 15px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -50,6 +57,10 @@ nav header {
     border-bottom: 1px solid var(--insight-calculation-top-gradient);
     width: 100%;
     text-align: center;
+}
+
+.mobile-menu a:nth-of-type(3) {
+    border: none;
 }
 
 

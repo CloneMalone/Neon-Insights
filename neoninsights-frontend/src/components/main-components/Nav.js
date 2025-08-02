@@ -40,6 +40,12 @@ function Nav() {
                     <Link onClick={toggleMenu} to="/register">Register</Link>
                 </div>
             )}
+
+            <div className="desktop-menu">
+                <Link className="desktop-menu-link" to="/">Home</Link>
+                <Link className="desktop-menu-link" to="/login">Login</Link>
+                <Link className="desktop-menu-link" to="/register">Register</Link>
+            </div>
         </nav>
     );
 }

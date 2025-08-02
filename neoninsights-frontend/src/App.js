@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import HomePage from './pages/HomePage.js';
 import RegisterPage from './pages/RegisterPage.js';
+import LoginPage from './pages/LoginPage.js';
 import RegisterCompletePage from './pages/RegisterCompletePage.js';
 import EmailConfirmedPage from './pages/EmailConfirmedPage.js';
 
@@ -20,6 +21,8 @@ import './styles/HomePage.css';
 import './styles/ToastifyOverrides.css';
 import './styles/RegisterComplete.css';
 import './styles/EmailConfirmed.css';
+import './styles/MediaQueries.css'
+import './styles/Footer.css';
 import './styles/Main.css';
 
 
@@ -29,6 +32,7 @@ import useSetTheme from './hooks/useSetTheme';
 
 // Component imports
 import Nav from './components/main-components/Nav.js';
+import Footer from './components/main-components/Footer.js';
 
 
 function App() {
@@ -41,11 +45,13 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/register-complete" element={<RegisterCompletePage />} />
         <Route path="/confirm-email/:token" element={<EmailConfirmedPage />} />
       </Routes>
 
       <ToastContainer />
+      <Footer />
     </Router>
   );
 }

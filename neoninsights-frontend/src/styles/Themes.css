@@ -8,7 +8,8 @@
 [data-theme="CyberDash"] {
     --font-family: 'Inter', sans-serif;
 
-    --background: #101014;
+    --background-bottom-gradient: #254A3B;
+    --background-top-gradient: #101014;
 
     --main-text: #F1F1F2;
 
