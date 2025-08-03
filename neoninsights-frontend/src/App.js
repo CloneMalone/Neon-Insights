@@ -10,6 +10,7 @@ import RegisterPage from './pages/RegisterPage.js';
 import LoginPage from './pages/LoginPage.js';
 import RegisterCompletePage from './pages/RegisterCompletePage.js';
 import EmailConfirmedPage from './pages/EmailConfirmedPage.js';
+import DashboardPage from './pages/DashboardPage.js';
 
 // CSS Imports
 import './styles/Reset.css';
@@ -22,6 +23,7 @@ import './styles/ToastifyOverrides.css';
 import './styles/RegisterComplete.css';
 import './styles/EmailConfirmed.css';
 import './styles/MediaQueries.css'
+import './styles/Dashboard.css'
 import './styles/Footer.css';
 import './styles/Main.css';
 
@@ -48,6 +50,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register-complete" element={<RegisterCompletePage />} />
         <Route path="/confirm-email/:token" element={<EmailConfirmedPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
       </Routes>
 
       <ToastContainer />

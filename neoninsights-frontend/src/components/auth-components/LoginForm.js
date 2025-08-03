@@ -20,6 +20,7 @@ function LoginForm() {
 
         if (ok) {
             toast.success(`Welcome, ${data.user.firstName} ${data.user.lastName}!`);
+            navigate('/dashboard');
         }
         else {
             toast.error(data.message);

@@ -42,7 +42,7 @@ async function addUser({ firstname, lastname, email, hashedPassword, token }) {
     );
 }
 
-// Get user from the database
+// Get user from the database by email
 async function getUserByEmail({ email }) {
     const result = await query("SELECT * FROM users WHERE email = $1", [email]);
 
@@ -50,7 +50,17 @@ async function getUserByEmail({ email }) {
         return result;
     }
 
-    // No user found
+    return null;
+}
+
+// Get user from database by ID
+async function getUserById({ userId }) {
+    const result = await query('SELECT * FROM users WHERE userid = $1', [userId]);
+
+    if (result.rows.length > 0) {
+        return result;
+    }
+
     return null;
 }
 
@@ -79,4 +89,4 @@ async function invalidateToken(token) {
     await query(`UPDATE users SET confirmationtoken = NULL WHERE confirmationtoken = $1`, [token]);
 } 
 
-export { addUser, userEmailExists, deleteUser, getUserByEmail, getUserByToken, getUserPasswordHash, userEmailConfirmed, confirmUserEmail, invalidateToken };
+export { addUser, userEmailExists, deleteUser, getUserById, getUserByEmail, getUserByToken, getUserPasswordHash, userEmailConfirmed, confirmUserEmail, invalidateToken };

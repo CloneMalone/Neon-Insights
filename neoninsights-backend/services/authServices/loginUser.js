@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import { getUserByEmail } from '../../models/user/userModel.js';
 
-async function loginUser({ email, password }) {
+async function loginUser({ email }) {
     const user = await getUserByEmail({ email });
     const row = user.rows[0];
 

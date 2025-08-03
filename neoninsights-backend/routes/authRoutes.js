@@ -6,6 +6,8 @@ import registerRequest from '../controllers/auth/registerRequest.js';
 import deleteRequest from '../controllers/auth/deleteRequest.js';
 import loginRequest from '../controllers/auth/loginRequest.js';
 import confirmEmailRequest from '../controllers/auth/confirmEmailRequest.js';
+import validateJWTTokenMiddleware from '../middleware/validation/validateJWTToken.js';
+import dashboardRequest from '../controllers/auth/dashboardRequest.js';
 
 // Set up a router
 const router = express.Router();
@@ -15,5 +17,6 @@ router.post('/register', validateRegisterUserMiddleware, registerRequest);
 router.post('/login', validateLoginUserMiddleware, loginRequest);
 router.post('/delete', validateDeleteUserMiddleware, deleteRequest);
 router.get('/confirm-email/:token', confirmEmailRequest);
+router.get('/dashboard', validateJWTTokenMiddleware, dashboardRequest);
 
 export default router;
