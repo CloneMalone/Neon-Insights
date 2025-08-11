@@ -22,8 +22,8 @@ import './styles/HomePage.css';
 import './styles/ToastifyOverrides.css';
 import './styles/RegisterComplete.css';
 import './styles/EmailConfirmed.css';
-import './styles/MediaQueries.css'
-import './styles/Dashboard.css'
+import './styles/MediaQueries.css';
+import './styles/Dashboard.css';
 import './styles/Footer.css';
 import './styles/Main.css';
 
@@ -32,18 +32,12 @@ import './styles/Main.css';
 import useSetTheme from './hooks/useSetTheme';
 
 
-// Component imports
-import Nav from './components/main-components/Nav.js';
-import Footer from './components/main-components/Footer.js';
-
-
 function App() {
   // On app re-render, assign the apps theme
   useSetTheme();
 
   return (
     <Router>
-      <Nav />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/register" element={<RegisterPage />} />
@@ -54,7 +48,6 @@ function App() {
       </Routes>
 
       <ToastContainer />
-      <Footer />
     </Router>
   );
 }

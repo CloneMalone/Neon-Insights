@@ -19,7 +19,6 @@ function LoginForm() {
         const { ok, data } = await loginUser(formData);
 
         if (ok) {
-            toast.success(`Welcome, ${data.user.firstName} ${data.user.lastName}!`);
             navigate('/dashboard');
         }
         else {
@@ -32,34 +31,32 @@ function LoginForm() {
 
 
     return (
-        <form onSubmit={handleSubmit} className="auth-form fade-in-slide-up">
-            <h2>Log In</h2>
-
-            <label htmlFor="email">Email:</label>
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email"
-                value={formData.email || ""}
-                onChange={handleChange}
-                required
-            />
-
-            <label htmlFor="password">Password:</label>
-            <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="8 or more characters"
-                value={formData.password || ""}
-                onChange={handleChange}
-                required
-            />
-
-            <button className="main-button" type="submit">Log In</button>
-
-        </form>
+        <main>
+            <form onSubmit={handleSubmit} className="auth-form fade-in-slide-up">
+                <h2>Log In</h2>
+                <label htmlFor="email">Email:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    value={formData.email || ""}
+                    onChange={handleChange}
+                    required
+                />
+                <label htmlFor="password">Password:</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    value={formData.password || ""}
+                    onChange={handleChange}
+                    required
+                />
+                <button className="main-button" type="submit">Log In</button>
+            </form>
+        </main>
     );
 
 }

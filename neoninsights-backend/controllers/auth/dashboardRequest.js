@@ -1,9 +1,6 @@
 import { getUserById } from "../../models/user/userModel.js";
 
 async function dashboardRequest(req, res) {
-
-    console.log("Dashboard request controller reached!");
-
     const userId = req.user.userId;
     const userData = await getUserById({ userId });
 
@@ -18,7 +15,7 @@ async function dashboardRequest(req, res) {
             isConfirmed: dbUser.isconfirmed,
             createdAt: dbUser.createdat,
         };
-        res.json({
+        res.status(200).json({
             message: "Reached end of dashboardRequest! Returned user data!",
             user
         });

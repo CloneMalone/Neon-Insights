@@ -2,8 +2,6 @@ import jwt from 'jsonwebtoken';
 
 function validateJWTTokenMiddleware(req, res, next) {
 
-    console.log('Validate Token Middleware reached!');
-
     const token = req.cookies.token; 
 
     if (!token) {

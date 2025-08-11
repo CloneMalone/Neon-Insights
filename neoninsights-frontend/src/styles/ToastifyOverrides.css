@@ -1,5 +1,5 @@
-[data-theme="CyberDash"] .Toastify__toast {
-    background-color: var(--background-top-gradient);
+[data-theme="Default"] .Toastify__toast {
+    background-color: var(--background);
     color: var(--main-text);
     border: 1px solid var(--insight-card-border);
 }

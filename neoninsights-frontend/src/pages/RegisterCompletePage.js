@@ -1,11 +1,12 @@
 import RegisterComplete from "../components/auth-components/RegisterComplete";
+import PublicPage from "../components/layouts/PublicPage.js";
 
 
 function RegisterCompletePage() {
     return (
-        <main className="register-complete-main fade-in-slide-up">
+        <PublicPage>
             <RegisterComplete />
-        </main>
+        </PublicPage>
     );
 }
 

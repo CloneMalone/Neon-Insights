@@ -2,22 +2,29 @@
     display: none;
 }
 
+.nav-container {
+    background-color: var(--nav-background);
+}
+
 nav {
-    background-color: var(--background-top-gradient);
-    position: fixed;
     z-index: 999;
     display: flex;
     flex-direction: column;
-    padding: 15px 15px;
-    width: 100%;
+    padding: 15px 0;
+    width: 70%;
     margin: 0 auto;
 }
 
 nav header {
     font-size: 1.7rem;
-    color: var(--main-text);
+    font-weight: 500;
+    color: var(--button-text);
     text-shadow: 0 0 3px var(--insight-calculation-top-gradient), 0 0 10px var(--insight-calculation-bottom-gradient);
 
+}
+
+nav a {
+    color: var(--button-text);
 }
 
 .header-hamburger-container {
@@ -31,14 +38,13 @@ nav header {
     flex-direction: column;
     justify-content: space-between;
     gap: 6px;
-    padding: 8px;
     border-radius: 8px;
 }
 
 .hamburger-container span {
     height: 3px;
     width: 30px;
-    background-color: var(--main-text);
+    background-color: var(--button-text);
     transition-duration: 0.5s;
 }
 
@@ -57,12 +63,43 @@ nav header {
     border-bottom: 1px solid var(--insight-calculation-top-gradient);
     width: 100%;
     text-align: center;
+    color: var(--button-text);
 }
 
 .mobile-menu a:nth-of-type(3) {
     border: none;
 }
 
+/* Hide Authed SideBar (Only should be visible on Desktop) */
+.authed-sidebar {
+    display: none;
+}
+
+/* MOBILE AUTHED BOTTOM NAV */
+.authed-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #1e1e2f;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #444;
+    z-index: 1000;
+  }
+
+  .authed-bottom-nav a {
+    color: #ccc;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .authed-bottom-nav a:hover {
+    color: #fff;
+  }
 
 
 /* Hamburger Animation On Click */

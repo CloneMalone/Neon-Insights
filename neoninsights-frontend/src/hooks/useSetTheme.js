@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-function useSetTheme(themeName = 'CyberDash') {
+function useSetTheme(themeName = 'Default') {
     useEffect(() => {
         document.documentElement.setAttribute('data-theme', themeName);
     }, [themeName]);

@@ -1,3 +1,72 @@
 .dashboard-main {
-    padding-top: 6rem;
+    padding-top: 2rem;
+}
+
+.dashboard-welcome-text {
+    font-size: 2.3rem;
+    background: linear-gradient(180deg, #00FFA3, #DC1FFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.key-insights-container {
+    margin-top: 2rem;
+}
+
+.key-insights-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.insight-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.insight-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--insight-card-border);
+    border-radius: 8px;
+    padding: 1.2rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    gap: 15px;
+    max-width: 100%;
+    min-width: 250px;
+}
+
+.insight-label-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.insight-label-logo-container .insight-card-label {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.insight-label-logo-container .insight-logo-container {
+    background-color: var(--insight-logo-background);
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.insight-label-logo-container .insight-logo-img {
+    color: var(--insight-logo-color);
+    width: 20px;
+}
+
+.key-insights-container .insight-card .insight-card-value {
+    display: flex;
+    font-size: 2rem;
+    background: linear-gradient(180deg, #00FFA3, #65AA94);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }

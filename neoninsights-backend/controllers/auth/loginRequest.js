@@ -8,7 +8,6 @@ async function loginRequest(req, res) {
     try {
         // JWT token signing/creation
         const { token, user } = await loginUser({ email });
-        console.log(token);
 
         // Set cookie
         res.cookie('token', token, {

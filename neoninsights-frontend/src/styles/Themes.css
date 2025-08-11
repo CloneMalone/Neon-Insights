@@ -4,23 +4,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 
-/* CyberDash Theme */
-[data-theme="CyberDash"] {
+/* Default Theme */
+[data-theme="Default"] {
     --font-family: 'Inter', sans-serif;
 
-    --background-bottom-gradient: #254A3B;
-    --background-top-gradient: #101014;
+    --background: #F3F5F7;
+    --nav-background: #1CDD99;
+    --main-text: #17181E;
+    --sidebar-nav-background: linear-gradient(145deg, #D8F8EE, #C3F3E2);
+    --sidebar-nav-text: #2D7A6B;
 
-    --main-text: #F1F1F2;
+    --input-form-focus: #1CDD99;
 
-    --insight-card-border: #2A292E;
-    --insight-card-bright-gradient: #287B5A;
-    --insight-card-mid-gradient: #203F32;
-    --insight-card-dark-gradient: #141D1E;
+    --insight-card-border: #DFE1E3;
+    --insight-logo-background: #ECFFFA;
+    --insight-logo-color: #65AA94;
 
-    --insight-calculation-top-gradient: #67C7A7;
-    --insight-calculation-bottom-gradient: #254A3B;
-
-    --button: #5fb89a;
+    --button: #1CDD99;
+    --button-hover: #1bcc8e;
+    --button-text: #F3F5F7;
 }
 

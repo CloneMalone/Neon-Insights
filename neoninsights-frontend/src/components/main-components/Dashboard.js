@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import '../../styles/Dashboard.css';
+import TotalCustomersInsight from "../user-components/TotalCustomersInsight.js";
+import TotalSalesRevenueInsight from "../user-components/TotalSalesRevenueInsight.js";
+import TotalProductsInsight from "../user-components/TotalProductsInsight.js";
 
 const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
@@ -21,8 +25,6 @@ function Dashboard() {
                 }
 
                 const data = await response.json();
-                console.log(`Response message: ${data.message}`);
-                console.log(`Response user First Name: ${data.user.firstName}`);
 
                 setUser(data.user);
 
@@ -38,9 +40,19 @@ function Dashboard() {
     if (!user) return <p>Loading...</p>;
 
     return (
-        <>
-            <h2>Welcome to your dashboard, {user.firstName} {user.lastName}!</h2>
-        </>
+        <main className="dashboard-main">
+            <h2 className="dashboard-welcome-text fade-in-slide-up">Welcome to Your Dashboard, {user.firstName} {user.lastName}!</h2>
+
+            <div className="key-insights-container fade-in-slide-up">
+                <h2>Key Insights</h2>
+                
+                <div class="insight-cards-container">
+                    <TotalCustomersInsight />
+                    <TotalSalesRevenueInsight />
+                    <TotalProductsInsight />
+                </div>
+            </div>
+        </main>
     )
 
 }

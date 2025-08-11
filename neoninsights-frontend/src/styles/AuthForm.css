@@ -19,7 +19,7 @@
 .auth-form input {
     width: 100%;
     padding: 0.75rem 1rem;
-    border: 1px solid #2A292E;
+    border: 1px solid var(--insight-card-border);
     border-radius: 6px;
     font-size: 1rem;
     outline: none;
@@ -27,8 +27,7 @@
 }
 
 .auth-form input:focus {
-    background: #203F32; /* Mid-Dark-Green-Gradient */
-    border-color: #287B5A; /* Bright-Green-Gradient */
+    background: var(--input-form-focus);
     color: var(--main-text);
 }
 

@@ -2,6 +2,7 @@ import EmailConfirmed from "../components/auth-components/EmailConfirmed";
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
+import PublicPage from "../components/layouts/PublicPage.js";
 
 import confirmEmail from "../api/confirmEmail.js";
 
@@ -29,13 +30,13 @@ function EmailConfirmedPage() {
 
 
     return (
-        <main className="email-confirmed-main">
+        <PublicPage>
             {success ? (
                 <EmailConfirmed />
             ) : (
                 <h2>Failed to confirm email. Please try again or contact support.</h2>
             )}
-        </main>
+        </PublicPage>
     );
 }
 

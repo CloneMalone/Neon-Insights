@@ -9,15 +9,11 @@ body {
     height: 100vh;
     margin: 0;
     font-family: var(--font-family);
-    background: linear-gradient(to bottom, var(--background-top-gradient), var(--background-bottom-gradient));
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    color: var(--main-text);
+    background-color: var(--background);
 }
 
 main {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -37,7 +33,7 @@ label {
     border: none;
     border-radius: 6px;
     background-color: var(--button);
-    color: var(--main-text);
+    color: var(--button-text);
     font-weight: bold;
     font-size: 1.1rem;
     cursor: pointer;
@@ -48,10 +44,9 @@ label {
 }
 
 .main-button:hover {
-    background-color: var(--insight-calculation-bottom-gradient);
+    background-color: var(--button-hover);
 }
 
 .default-link {
     text-decoration: underline;
-    cursor: pointer;
 }

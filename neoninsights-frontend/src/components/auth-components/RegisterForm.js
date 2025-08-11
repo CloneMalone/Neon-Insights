@@ -30,67 +30,62 @@ function RegisterForm() {
 
 
     return (
-        <form onSubmit={handleSubmit} className="auth-form fade-in-slide-up">
-            <h2>Sign Up</h2>
-
-            <label htmlFor="firstname">First Name:</label>
-            <input
-                type="text"
-                id="firstname"
-                name="firstname"
-                placeholder="Enter your first name"
-                value={formData.firstname || ""}
-                onChange={handleChange}
-                required
-            />
-
-            <label htmlFor="lastname">Last Name:</label>
-            <input
-                type="text"
-                id="lastname"
-                name="lastname"
-                placeholder="Enter your last name"
-                value={formData.lastname || ""}
-                onChange={handleChange}
-                required
-            />
-
-            <label htmlFor="email">Email:</label>
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email"
-                value={formData.email || ""}
-                onChange={handleChange}
-                required
-            />
-
-            <label htmlFor="password">Password:</label>
-            <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="8 or more characters"
-                value={formData.password || ""}
-                onChange={handleChange}
-                required
-            />
-
-            <label htmlFor="confirmPassword">Confirm Password:</label>
-            <input
-                type="password"
-                id="confirmPassword"
-                name="confirmPassword"
-                placeholder="Retype password"
-                value={formData.confirmPassword || ""}
-                onChange={handleChange}
-                required
-            />
-
-            <button className="main-button" type="submit">Create Account</button>
-
-        </form>
+        <main>
+            <form onSubmit={handleSubmit} className="auth-form fade-in-slide-up">
+                <h2>Sign Up</h2>
+                <label htmlFor="firstname">First Name:</label>
+                <input
+                    type="text"
+                    id="firstname"
+                    name="firstname"
+                    placeholder="Enter your first name"
+                    value={formData.firstname || ""}
+                    onChange={handleChange}
+                    required
+                />
+                <label htmlFor="lastname">Last Name:</label>
+                <input
+                    type="text"
+                    id="lastname"
+                    name="lastname"
+                    placeholder="Enter your last name"
+                    value={formData.lastname || ""}
+                    onChange={handleChange}
+                    required
+                />
+                <label htmlFor="email">Email:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    value={formData.email || ""}
+                    onChange={handleChange}
+                    required
+                />
+                <label htmlFor="password">Password:</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="8 or more characters"
+                    value={formData.password || ""}
+                    onChange={handleChange}
+                    required
+                />
+                <label htmlFor="confirmPassword">Confirm Password:</label>
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    placeholder="Retype password"
+                    value={formData.confirmPassword || ""}
+                    onChange={handleChange}
+                    required
+                />
+                <button className="main-button" type="submit">Create Account</button>
+            </form>
+        </main>
     );
 
 }

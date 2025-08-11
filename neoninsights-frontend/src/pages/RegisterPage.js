@@ -1,10 +1,11 @@
-import RegisterForm from "../components/auth-components/RegisterForm";
+import RegisterForm from "../components/auth-components/RegisterForm.js";
+import PublicPage from "../components/layouts/PublicPage.js";
 
 function RegisterPage() {
     return (
-        <main>
+        <PublicPage>
             <RegisterForm />
-        </main>
+        </PublicPage>
     );
 }
 
