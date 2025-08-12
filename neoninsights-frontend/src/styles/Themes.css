@@ -3,13 +3,17 @@
     /* Inter */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+    /* Orbitron */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
 
 /* Default Theme */
 [data-theme="Default"] {
     --font-family: 'Inter', sans-serif;
+    --header-font: 'Orbitron', sans-serif;
+    --authed-nav-link: #919395;
 
     --background: #F3F5F7;
-    --nav-background: #1CDD99;
+    --nav-background: #2f1cdd00;
     --main-text: #17181E;
     --sidebar-nav-background: linear-gradient(145deg, #D8F8EE, #C3F3E2);
     --sidebar-nav-text: #2D7A6B;

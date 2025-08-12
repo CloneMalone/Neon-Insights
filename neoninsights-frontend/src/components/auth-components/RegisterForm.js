@@ -41,6 +41,8 @@ function RegisterForm() {
                     placeholder="Enter your first name"
                     value={formData.firstname || ""}
                     onChange={handleChange}
+                    autoComplete="off"
+                    aria-autocomplete="none"
                     required
                 />
                 <label htmlFor="lastname">Last Name:</label>
@@ -51,6 +53,8 @@ function RegisterForm() {
                     placeholder="Enter your last name"
                     value={formData.lastname || ""}
                     onChange={handleChange}
+                    autoComplete="off"
+                    aria-autocomplete="none"
                     required
                 />
                 <label htmlFor="email">Email:</label>
@@ -61,6 +65,8 @@ function RegisterForm() {
                     placeholder="Enter your email"
                     value={formData.email || ""}
                     onChange={handleChange}
+                    autoComplete="off"
+                    aria-autocomplete="none"
                     required
                 />
                 <label htmlFor="password">Password:</label>
@@ -71,6 +77,8 @@ function RegisterForm() {
                     placeholder="8 or more characters"
                     value={formData.password || ""}
                     onChange={handleChange}
+                    autoComplete="off"
+                    aria-autocomplete="none"
                     required
                 />
                 <label htmlFor="confirmPassword">Confirm Password:</label>
@@ -81,6 +89,8 @@ function RegisterForm() {
                     placeholder="Retype password"
                     value={formData.confirmPassword || ""}
                     onChange={handleChange}
+                    autoComplete="off"
+                    aria-autocomplete="none"
                     required
                 />
                 <button className="main-button" type="submit">Create Account</button>

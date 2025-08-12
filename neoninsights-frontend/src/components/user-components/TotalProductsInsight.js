@@ -13,7 +13,7 @@ function TotalProductsInsight() {
                 </div>
                 <p className="insight-card-label">Total Products</p>
             </div>
-            <span class="insight-card-value">
+            <span className="insight-card-value">
                 <StatCounter className="insight-card-value" id="total-products" endValue={58} />
             </span>
         </div>

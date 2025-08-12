@@ -42,6 +42,8 @@ function LoginForm() {
                     placeholder="Enter your email"
                     value={formData.email || ""}
                     onChange={handleChange}
+                    autoComplete="off"
+                    aria-autocomplete="none"
                     required
                 />
                 <label htmlFor="password">Password:</label>
@@ -52,6 +54,8 @@ function LoginForm() {
                     placeholder="Enter your password"
                     value={formData.password || ""}
                     onChange={handleChange}
+                    autoComplete="off"
+                    aria-autocomplete="none"
                     required
                 />
                 <button className="main-button" type="submit">Log In</button>

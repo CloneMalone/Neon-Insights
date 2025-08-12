@@ -46,7 +46,7 @@ function Dashboard() {
             <div className="key-insights-container fade-in-slide-up">
                 <h2>Key Insights</h2>
                 
-                <div class="insight-cards-container">
+                <div className="insight-cards-container">
                     <TotalCustomersInsight />
                     <TotalSalesRevenueInsight />
                     <TotalProductsInsight />

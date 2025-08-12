@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
+import headerLogo from '../../assets/header-logo.png';
 
 function PublicNav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,6 +22,10 @@ function PublicNav() {
                 <div className="header-hamburger-container">
                     <Link to="/">
                         <header>
+                            <img className="header-logo"
+                                src={headerLogo}
+                                alt="Neon Insights Logo"
+                            />
                             Neon Insights
                         </header>
                     </Link>

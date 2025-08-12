@@ -10,22 +10,49 @@ nav {
     z-index: 999;
     display: flex;
     flex-direction: column;
-    padding: 15px 0;
+    padding: 20px 0;
     width: 70%;
     margin: 0 auto;
 }
 
 nav header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--header-font);
     font-size: 1.7rem;
     font-weight: 500;
-    color: var(--button-text);
+    color: var(--main-text);
     text-shadow: 0 0 3px var(--insight-calculation-top-gradient), 0 0 10px var(--insight-calculation-bottom-gradient);
+    transition: text-shadow 0.3s, color 0.3s;
+}
 
+.header-logo {
+    height: 32px;
+    width: 32px;
+}
+
+nav header:hover {
+    text-shadow:
+        0 0 8px #00FFA3,
+        0 0 16px #DC1FFF,
+        0 0 24px #00ffe7;
 }
 
 nav a {
-    color: var(--button-text);
+    color: var(--main-text);
+    font-weight: 500;
+    transition: text-shadow 0.3s, color 0.3s;
 }
+
+nav a:hover {
+    text-shadow:
+        0 0 8px #00FFA3,
+        0 0 16px #DC1FFF,
+        0 0 24px #00ffe7;
+}
+
+
 
 .header-hamburger-container {
     display: flex;
@@ -71,7 +98,7 @@ nav a {
 }
 
 /* Hide Authed SideBar (Only should be visible on Desktop) */
-.authed-sidebar {
+.authed-desktop-navbar {
     display: none;
 }
 
