@@ -22,8 +22,11 @@ Neon Insights is a full-stack web application for business analytics, customer m
 
 ## 🛠 Tech Stack
 **Front End:**  React, React Router, CSS Modules
+
 **Back End:**  Node.js, Express.js
+
 **Database:**  PostgreSQL
+
 **Other:**  Nodemailer, JWT, dotenv, Toastify
 
 ---
